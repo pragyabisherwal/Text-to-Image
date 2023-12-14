@@ -12,14 +12,15 @@ if __name__ == '__main__':
     train_dir = data_dir + "/train"
     test_dir = data_dir + "/test"
     image_size = 64
-    batch_size = 64
-    z_dim = 100
+    batch_size = 64                       #Number of data samples utilized in one iteration
+    z_dim = 100                           #Sets the dimensionality of the random noise vector
     stage1_generator_lr = 0.0002
     stage1_discriminator_lr = 0.0002
     stage1_lr_decay_step = 600
     epochs = 1000
-    condition_dim = 128
+    condition_dim = 128                 #Dimensionality of the conditional vector
 
+    # Defining the path variables
     embeddings_file_path_train = train_dir + "/char-CNN-RNN-embeddings.pickle"
     embeddings_file_path_test = test_dir + "/char-CNN-RNN-embeddings.pickle"
 
