@@ -17,7 +17,7 @@ if __name__ == '__main__':
     stage1_generator_lr = 0.0002
     stage1_discriminator_lr = 0.0002
     stage1_lr_decay_step = 600
-    epochs = 73   #CHANGES
+    epochs = 1000   #CHANGES
     condition_dim = 128                 #Dimensionality of the conditional vector
 
     # Defining the path variables
@@ -90,8 +90,8 @@ if __name__ == '__main__':
         dis_losses = []
 
         # Load data and train model
-        number_of_batches = 10 #CHANGES
-        #number_of_batches = int(X_train.shape[0] / (batch_size))
+        # number_of_batches = 10 #CHANGES
+        number_of_batches = int(X_train.shape[0] / (batch_size))
         for index in range(number_of_batches):
             print("Batch:{}".format(index + 1))
 
